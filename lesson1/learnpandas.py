@@ -49,3 +49,6 @@ count_subset=agg_counts.take(indexer)[-10:]
 
 print (count_subset)
 count_subset.plot(kind="barh",stacked=True)
+
+normed_subset=count_subset.div(count_subset.sum(1),axis=0)
+normed_subset.plot(kind="barh",stacked=True)
